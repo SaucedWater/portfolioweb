@@ -18,11 +18,11 @@ const robotoMono = localFont({
   weight: "100 900",
 });
 
-const firaCode = localFont({
-  src: "./fonts/FiraCode.ttf",
-  variable: "--font-fira-code",
-  weight: "100 900",
-});
+// const firaCode = localFont({
+//   src: "./fonts/FiraCode.ttf",
+//   variable: "--font-fira-code",
+//   weight: "100 900",
+// });
 
 export const metadata = {
   title: "Create Next App",
