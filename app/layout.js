@@ -12,11 +12,11 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const robotoMono = localFont({
-  src: "./fonts/RobotoMono-VariableFont_wght.ttf",
-  variable: "--font-roboto-mono",
-  weight: "100 900",
-});
+// const robotoMono = localFont({
+//   src: "./fonts/RobotoMono-VariableFont_wght.ttf",
+//   variable: "--font-roboto-mono",
+//   weight: "100 900",
+// });
 
 // const firaCode = localFont({
 //   src: "./fonts/FiraCode.ttf",
