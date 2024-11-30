@@ -34,23 +34,27 @@ export default function Home() {
             >
               Contact
             </a>
+            <a
+              href="#miscellaneous"
+              className="hover:text-cyan-500 transition-all duration-300"
+            >
+              Miscellaneous
+            </a>
           </nav>
         </div>
       </header>
 
-{/* <!-- About Section --> */}
-<section id="about" className="py-16 bg-gray-950 text-gray-200">
-  <div className="container mx-auto text-center flex flex-col items-center">
-    <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white font-fira tracking-wide">
-      root@ian ~$: whoami
-    </h2>
-    <p className="text-lg md:text-xl text-gray-300 mb-6 opacity-75">
-      Hello! I'm Ian, a Year 2 Cybersecurity student at Temasek Polytechnic.
-    </p>
-  </div>
-</section>
-
-
+      {/* <!-- About Section --> */}
+      <section id="about" className="py-16 bg-gray-950 text-gray-200">
+        <div className="container mx-auto text-center flex flex-col items-center">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white font-fira tracking-wide">
+            root@ian ~$: whoami
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 mb-6 opacity-75">
+            Hello! I'm Ian, a Year 2 Cybersecurity student at Temasek Polytechnic.
+          </p>
+        </div>
+      </section>
 
       {/* <!-- Projects Section --> */}
       <section id="projects" className="py-12 bg-gray-900 text-gray-300">
@@ -111,8 +115,36 @@ export default function Home() {
         </div>
       </section>
 
+{/* <!-- Miscellaneous Section --> */}
+<section id="miscellaneous" className="py-12 bg-gray-900 text-gray-300">
+  <div className="container mx-auto text-center">
+    <h2 className="text-3xl font-bold mb-8 text-cyan-400">./Miscellaneous</h2>
+    <div className="space-y-8">
+      <div className="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+        <h3 className="text-2xl font-semibold text-cyan-400 mb-4">CTF Writeups</h3>
+        <p className="text-lg text-gray-400 mb-6">
+          A collection of my Capture The Flag writeups.
+        </p>
+        {/* Scrollable writeups container */}
+        <div className="h-72 overflow-y-scroll p-6 bg-gray-700 rounded-lg shadow-inner">
+          {/* Writeup 1 */}
+          <div className="mb-6">
+            <h4 className="text-xl font-semibold text-cyan-400">Yes But No 2024 CTF</h4>
+            <p className="text-gray-400">
+              To Be Updated...
+            </p>
+          </div>
+          {/* Add more writeups here as needed */}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
       {/* <!-- Contact Section --> */}
-      <section id="contact" className="py-12 bg-gray-900 text-gray-300">
+      <section id="contact" className="bg-gray-950 py-6">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-cyan-400">./Contacts</h2>
           <p>
@@ -139,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* <!-- Footer --> */}
-      <footer className="bg-gray-950 py-6">
+      <footer className="py-12 bg-gray-900 text-gray-300">
         <div className="container mx-auto text-center">
           <p className="text-lg mb-4 text-gray-400">Cybersecurity Student @ Temasek Polytechnic</p>
           <p className="text-gray-500 text-sm">© 2024 Ian. All rights reserved.</p>
