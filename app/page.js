@@ -131,7 +131,7 @@ export default function Home() {
           <div className="mb-6">
             <h4 className="text-xl font-semibold text-cyan-400">Yes But No 2024 CTF</h4>
             <p className="text-gray-400">
-              To Be Updated...
+              (29-30 Nov) - To Be Updated...
             </p>
           </div>
           {/* Add more writeups here as needed */}
