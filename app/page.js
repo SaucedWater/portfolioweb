@@ -51,7 +51,7 @@ export default function Home() {
             root@ian ~$: whoami
           </h2>
           <p className="text-lg md:text-xl text-gray-300 mb-6 opacity-75">
-            Hello! I'm Ian, a Year 3 Cybersecurity student at Temasek Polytechnic.
+            Hello! Welcome to my page! I'm Ian, a Year 3 Cybersecurity student at Temasek Polytechnic.
           </p>
         </div>
       </section>
