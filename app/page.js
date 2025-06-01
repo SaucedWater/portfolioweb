@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+// app/about/page.js
 
 //last edited 1205am 27/11/24
 
