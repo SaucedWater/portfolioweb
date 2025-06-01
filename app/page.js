@@ -141,7 +141,7 @@ export default function Home() {
       <footer className="py-12 bg-gray-900 text-gray-300">
         <div className="container mx-auto text-center">
           <p className="text-lg mb-4 text-gray-400">Cybersecurity Student @ Temasek Polytechnic</p>
-          <p className="text-gray-500 text-sm">© 2024 Ian. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© 2025 Ian. All rights reserved.</p>
         </div>
       </footer>
     </div>
