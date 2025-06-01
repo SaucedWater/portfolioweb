@@ -121,21 +121,8 @@ export default function Home() {
     <h2 className="text-3xl font-bold mb-8 text-cyan-400">./Miscellaneous</h2>
     <div className="space-y-8">
       <div className="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
-        <h3 className="text-2xl font-semibold text-cyan-400 mb-4">CTF Writeups</h3>
-        <p className="text-lg text-gray-400 mb-6">
-          A collection of my Capture The Flag writeups.
-        </p>
-        {/* Scrollable writeups container */}
-        <div className="h-72 overflow-y-scroll p-6 bg-gray-700 rounded-lg shadow-inner">
-          {/* Writeup 1 */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-cyan-400">Yes But No 2024 CTF</h4>
-            <p className="text-gray-400">
-              (29-30 Nov) - To Be Updated...
-            </p>
-          </div>
-          {/* Add more writeups here as needed */}
-        </div>
+        <h3 className="text-2xl font-semibold text-cyan-400 mb-4">Coming Soon...</h3>
+
       </div>
     </div>
   </div>
