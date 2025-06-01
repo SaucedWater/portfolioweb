@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Typewriter from "./components/Typewriter";
 
 // app/about/page.js
 // last edited 12:05am 27/11/24
@@ -33,9 +34,7 @@ export default function Home() {
       {/* <!-- About Section --> */}
       <section id="about" className="py-16 bg-gray-950 text-gray-200">
         <div className="container mx-auto text-center flex flex-col items-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white font-fira tracking-wide">
-            root@ian ~$: whoami
-          </h2>
+          <Typewriter text="root@ian ~$: whoami" speed={100} />
           <p className="text-lg md:text-xl text-gray-300 mb-6 opacity-75">
             Hello! Welcome to my page! I'm Ian, a Year 3 Cybersecurity student at Temasek Polytechnic.
           </p>
