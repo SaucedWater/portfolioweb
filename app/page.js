@@ -9,7 +9,7 @@ import MiscellaneousSection from "./components/Sections/MiscellaneousSection";
 import ContactSection from "./components/Sections/ContactSection";
 
 export const metadata = {
-  title: "Ian Kwok | Cybersecurity Student Portfolio",
+  title: "Ian Kwok",
   description:
     "Portfolio of Ian Kwok, Cybersecurity student at Temasek Polytechnic. View projects, skills, and contact info.",
 };
