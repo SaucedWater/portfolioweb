@@ -31,6 +31,7 @@ export default function Home() {
 
         {/* 4. Footer (placed at bottom of all sections) */}
         <footer className="py-10 bg-gray-900 dark:bg-gray-800 text-center text-sm text-gray-500 dark:text-gray-400">
+          
           <p className="mb-2">Cybersecurity Student @ Temasek Polytechnic</p>
           <p>© {new Date().getFullYear()} Ian. All rights reserved.</p>
         </footer>

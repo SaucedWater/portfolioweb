@@ -1,29 +1,19 @@
 // app/layout.js
-
-"use client"; // ← Marks this file as a Client Component (so we can use useState, useEffect, etc.)
+"use client";
 
 import { createContext, useState, useEffect } from "react";
 import Link from "next/link";
 import "./globals.css";
 
-/**
- * Create a ThemeContext. 
- * Children can read `darkMode` (boolean) and toggle via `setDarkMode`.
- */
 export const ThemeContext = createContext({
   darkMode: false,
   setDarkMode: () => {},
 });
 
-
-
 export default function RootLayout({ children }) {
-  // 1. Local state: track whether dark mode is ON (true) or OFF (false).
   const [darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // 2. Whenever `darkMode` changes, update the <html> element's class list.
-  //    If darkMode === true, we add the 'dark' class to <html>. Otherwise, we remove it.
-  //    Tailwind CSS (configured with `darkMode: 'class'`) will then apply dark styles.
   useEffect(() => {
     const rootHtml = document.documentElement;
     if (darkMode) {
@@ -33,33 +23,30 @@ export default function RootLayout({ children }) {
     }
   }, [darkMode]);
 
+  // Array of section IDs/titles
+  const sections = ["about", "projects", "skills", "misc", "contact"];
+
   return (
-    // 3. Wrap everything inside ThemeContext.Provider so child components can read or toggle theme.
     <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-      {/* 
-        4. Note: In Next.js App Router, <html> and <body> tags wrap your page.
-           We set className on <body> to define default light or dark background/text. 
-           Since Tailwind uses `dark:` variants, as soon as <html> has class="dark", 
-           any `dark:bg-...` or `dark:text-...` classes will apply.
-      */}
       <html lang="en">
-        {/* 
-          5. Here, we choose different background/text colors based on `darkMode`.
-             - If darkMode is true → bg-gray-900 / text-gray-100
-             - If darkMode is false → bg-gray-100 / text-gray-900
-        */}
-        <body className={`${darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"} font-sans`}>
-          {/* ——— Shared Navigation Bar ——— */}
+        <body
+          className={`${
+            darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"
+          } font-sans`}
+        >
           <header className="bg-gray-950 dark:bg-gray-800 text-gray-200 dark:text-gray-200 py-4 shadow-md sticky top-0 z-50">
             <div className="max-w-4xl mx-auto px-4 flex items-center justify-between">
-              {/* 6. Left: Site Title (can be a Link to home) */}
-              <Link href="/" className="text-2xl font-bold hover:text-cyan-400 transition-colors duration-300">
+              {/* Site Title */}
+              <Link
+                href="/"
+                className="text-2xl font-bold hover:text-cyan-400 transition-colors duration-300"
+              >
                 Ian K.
               </Link>
 
-              {/* 7. Center: Navigation Links (client‑side Next.js <Link>) */}
-              <nav className="flex space-x-6">
-                {["about", "projects", "skills", "miscellaneous", "contact"].map((id) => (
+              {/* ─── Desktop: Horizontal Links ─── */}
+              <nav className="hidden md:flex space-x-6">
+                {sections.map((id) => (
                   <Link
                     key={id}
                     href={`#${id}`}
@@ -70,10 +57,50 @@ export default function RootLayout({ children }) {
                 ))}
               </nav>
 
+              {/* ─── Mobile: Dropdown Toggle ─── */}
+              <div className="flex md:hidden relative">
+                <button
+                  onClick={() => setMenuOpen((prev) => !prev)}
+                  className="flex items-center space-x-2 bg-gray-800 dark:bg-gray-700 px-3 py-2 rounded-md hover:bg-gray-700 transition-colors duration-200"
+                >
+                  <span className="text-gray-200 dark:text-gray-200">Menu</span>
+                  <svg
+                    className={`w-4 h-4 text-gray-200 dark:text-gray-200 transform transition-transform ${
+                      menuOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                {menuOpen && (
+                  <ul className="absolute right-0 mt-2 w-40 bg-gray-800 dark:bg-gray-700 rounded-md shadow-lg overflow-hidden z-50">
+                    {sections.map((id) => (
+                      <li key={id}>
+                        <Link
+                          href={`#${id}`}
+                          className="block px-4 py-2 text-gray-200 dark:text-gray-200 hover:bg-gray-700 transition-colors duration-150 capitalize"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {id}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           </header>
 
-          {/* ——— Page content will be rendered here ——— */}
           <main>{children}</main>
         </body>
       </html>
