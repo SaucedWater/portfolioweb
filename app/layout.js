@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
 
               {/* 7. Center: Navigation Links (client‑side Next.js <Link>) */}
               <nav className="flex space-x-6">
-                {["about", "projects", "skills", "contact", "miscellaneous"].map((id) => (
+                {["about", "projects", "skills", "miscellaneous", "contact"].map((id) => (
                   <Link
                     key={id}
                     href={`#${id}`}
