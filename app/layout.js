@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
             <div className="max-w-4xl mx-auto px-4 flex items-center justify-between">
               {/* 6. Left: Site Title (can be a Link to home) */}
               <Link href="/" className="text-2xl font-bold hover:text-cyan-400 transition-colors duration-300">
-                Ian Kwok
+                Ian K.
               </Link>
 
               {/* 7. Center: Navigation Links (client‑side Next.js <Link>) */}
