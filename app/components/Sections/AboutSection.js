@@ -7,7 +7,7 @@ export default function AboutSection() {
       <div className="max-w-2xl mx-auto px-4">
         <Typewriter text="root@ian ~$: whoami" speed={100} />
         <p className="text-xl text-gray-400 mt-4">
-          Hello! I'm Ian, a Year 3 Cybersecurity student @ Temasek Polytechnic. Welcome to my digital space.
+          Hello! I'm Ian, a Year 3 Cybersecurity student @ Temasek Polytechnic. Welcome to my website!
         </p>
       </div>
     </section>
