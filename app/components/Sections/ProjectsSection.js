@@ -7,6 +7,13 @@ export default function ProjectsSection() {
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-cyan-400 mb-10">./Projects</h2>
         <div className="space-y-6">
+
+          <ProjectCard
+            title="Secure Web Application Project"
+            description="Built a secure web app."
+            url="https://github.com/SaucedWater/SWAP-Project-AY2425"
+          />
+          
           <ProjectCard
             title="Functioning E-Commerce Website"
             description="Built a functioning e-commerce website using JavaScript & HTML/CSS."
@@ -17,6 +24,7 @@ export default function ProjectsSection() {
             description="Python script used for web scraping."
             url="https://github.com/SaucedWater/DA_WWIP_Ian_Kwok_Proj"
           />
+
         </div>
       </div>
     </section>
