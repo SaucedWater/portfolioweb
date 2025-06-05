@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   }, [darkMode]);
 
   // Array of section IDs/titles
-  const sections = ["about", "projects", "skills", "misc", "contact"];
+  const sections = ["about", "projects", "skills", "miscellaneous", "contact"];
 
   return (
     <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
