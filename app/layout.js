@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
 
   // an array of section IDs/titles that we’ll use for navigation links
   // these correspond to parts of our page like #about, #projects, etc.
-  const sections = ["about", "projects", "skills", "miscellaneous", "contact"];
+  const sections = ["about", "projects", "skills", "achievements/certifications", "contact"];
 
   return (
     // wrap everything in ThemeContext.Provider so any child can read or update darkMode

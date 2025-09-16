@@ -1,5 +1,5 @@
-// app/components/MiscCard.js
-export default function MiscCard({ title, description, url }) {
+// app/components/CertCard.js
+export default function CertCard({ title, description, image, link }) {
   return (
     <article className="bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition overflow-hidden">
       {/* ─── this gives the title bar with 3 Dots ─── */}
@@ -17,6 +17,12 @@ export default function MiscCard({ title, description, url }) {
         <h3 className="text-xl font-semibold text-cyan-400">{title}</h3>
         <p className="text-gray-400 my-2">{description}</p>
 
+        {/* image */}
+        {image && (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <img src={image} alt={title || "Certification Image"} className="w-full h-auto rounded-md mt-4" />
+          </a>
+        )}
       </div>
     </article>
   );

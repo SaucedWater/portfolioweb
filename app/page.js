@@ -5,7 +5,7 @@ import Head from "next/head";
 import AboutSection from "./components/Sections/AboutSection";
 import ProjectsSection from "./components/Sections/ProjectsSection";
 import SkillsSection from "./components/Sections/SkillsSection";
-import MiscellaneousSection from "./components/Sections/MiscellaneousSection";
+import MiscellaneousSection from "./components/Sections/CertSection";
 import ContactSection from "./components/Sections/ContactSection";
 
 export const metadata = {
