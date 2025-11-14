@@ -7,11 +7,20 @@ export default function MiscellaneousSection() {
       <div className="max-w-2xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-cyan-400 mb-6">./Achievements & Certifications </h2>
         <div className="space-y-6">
+
+                              <CertCard
+            title="CompTIA Security+"
+            description="Achieved CompTIA Security+."
+            image="/comptiacert.jpeg" // Path to image
+          />
+          
           <CertCard
             title="Certified Ethical Hacker"
             description="Achieved CEH certification."
             image="/CEHCERT.jpg" // Path to image
           />
+
+
         </div>
       </div>
     </section>
