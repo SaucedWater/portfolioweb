@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
 
   // an array of section IDs/titles that we’ll use for navigation links
   // these correspond to parts of our page like #about, #projects, etc.
-  const sections = ["about", "projects", "skills", "achievements/certifications", "contact"];
+  const sections = ["about", "projects", "skills", "certifications", "contact"];
 
   return (
     // wrap everything in ThemeContext.Provider so any child can read or update darkMode
@@ -65,8 +65,9 @@ export default function RootLayout({ children }) {
         >
           {/* header: top navigation area */}
           {/* bg-gray-950 is an extra-dark background for light mode,
-              dark:bg-gray-800 is a slightly lighter dark background in dark mode */}
-          <header className="bg-gray-950 dark:bg-gray-800 text-gray-200 dark:text-gray-200 py-4 shadow-md sticky top-0 z-50">
+              dark:bg-gray-800 is a slightly lighter dark background in dark mode,
+               added backdrop-blur-md and fixed top-0 for sticky opaque navbar*/}
+          <header className="bg-gray-950/80 dark:bg-gray-800/80 backdrop-blur-md text-gray-200 dark:text-gray-200 py-4 shadow-md fixed top-0 left-0 w-full z-50">
             {/* container for header content: centers it and adds padding */}
             <div className="max-w-4xl mx-auto px-4 flex items-center justify-between">
               {/* site title / logo on the left */}

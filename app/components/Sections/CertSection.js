@@ -1,7 +1,7 @@
 // app/components/Sections/MiscellaneousSection.js
 import CertCard from "../../components/CertCard";
 
-export default function MiscellaneousSection() {
+export default function CertSection() {
   return (
     <section id="miscellaneous" className="py-16 bg-gray-900 text-gray-300 text-center">
       <div className="max-w-2xl mx-auto px-4">

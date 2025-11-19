@@ -83,7 +83,7 @@ export default function Typewriter({
 
   // render the component: show current text + blinking cursor
   return (
-    <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white font-fira tracking-wide">
+    <h2 className="text-2xl md:text-5xl font-bold mb-6 text-white font-fira tracking-wide">
       {displayed} {/* the text that's currently being displayed */}
       <span className="animate-pulse text-cyan-400">|</span> {/* blinking cursor */}
     </h2>
